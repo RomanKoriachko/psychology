@@ -61,7 +61,7 @@ table {
 .slide1 .content1 {
   font-weight: 700;
   font-size: 32px;
-  -webkit-text-stroke: 1px #858585;
+  -webkit-text-stroke: 0.5px black;
 }
 
 body {
@@ -197,7 +197,8 @@ body {
   }
   .slide1 .content1 {
     text-align: left;
-    top: 375px;
+    left: -15px;
+    top: 530px;
   }
 }
 
@@ -206,8 +207,18 @@ body {
   .container {
     width: 1170px;
   }
+  .slide1 .content1 {
+    left: -10px;
+  }
   .content2 {
     margin-top: 150px;
+  }
+}
+
+@media (min-width: 1620px) {
+  .slide1 .content1 {
+    left: -220px;
+    top: 530px;
   }
 }
 /*# sourceMappingURL=style.css.map */

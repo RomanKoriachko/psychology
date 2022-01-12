@@ -15,7 +15,7 @@
 %fonts-bold-stroke {
     font-weight: 700;
     font-size: 32px;
-    -webkit-text-stroke: 1px rgb(133, 133, 133);
+    -webkit-text-stroke: 0.5px rgb(0, 0, 0);
 }
 body {
     font-family: 'Spline Sans', sans-serif;
@@ -78,7 +78,7 @@ body {
         text-align: center;
         position: relative;
         top: 275px;
-        color: white;
+        color: rgb(255, 255, 255);
         .text-header {
             font-size: 43px;
         }
@@ -135,7 +135,8 @@ body {
         background-position: center;
         .content1 {
             text-align: left;
-            top: 375px;
+            left: -15px;
+            top: 530px;
         }
     }
 }
@@ -144,7 +145,21 @@ body {
     .container {
         width: 1170px;
     }
+    .slide1 {
+        .content1 {
+            left: -10px;
+        }
+    }
     .content2 {
         margin-top: 150px;
+    }
+}
+
+@media (min-width:1620px) {
+    .slide1 {
+        .content1 {
+            left: -220px;
+            top: 530px;
+        }
     }
 }
