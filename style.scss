@@ -96,8 +96,9 @@ body {
     text-align: center;
     height: 500px;
     >p {
-        align-self: center;
+        align-self: flex-start;
         justify-self: center;
+        margin-top: 80px;
     }
 }
 .slide4 {
@@ -211,6 +212,9 @@ body {
     }
     .content3 {
         @include fonts(42px, white); 
+        >p {
+            margin-top: 140px;
+        }
     }
     .slide3 {
         min-height: 800px;
