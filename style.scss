@@ -15,7 +15,7 @@
 %fonts-bold-stroke {
     font-weight: 700;
     font-size: 32px;
-    -webkit-text-stroke: 0.5px rgb(0, 0, 0);
+    -webkit-text-stroke: 0.8px rgb(0, 0, 0);
 }
 body {
     font-family: 'Spline Sans', sans-serif;
@@ -174,11 +174,92 @@ body {
         text-shadow: rgb(0, 0, 0) 0 0 6px;
     }
 }
+[class*="slide4-item"] {
+    transition: all ease-in-out 1s;
+}
 [class*="slide4-item"]:hover {
     transform: scale(1.3);
     text-shadow: rgb(0, 0, 0) 0 0 0px;
-    transition: all ease-in-out 0.5s;
+    transition: all ease-in-out 1s;
 }
+.slide5 {
+    background-image: url(./images/slide5-2.jpg);
+    background-size: auto 500px;
+    background-repeat: no-repeat;
+    background-position: top;
+}
+.content5 {
+    min-height: 500px;
+    @include fonts(32px, white);
+    display: grid;
+    text-align: center;
+    align-content: center;
+}
+
+.slider {
+    min-height: 400px;
+    max-width: 1170px;
+    @include fonts(21px, rgb(133, 133, 133));
+    padding: 100px 0px;
+    .content-center {
+        @include fonts(32px, rgb(133, 133, 133));
+        text-align: center;
+        margin-bottom: 0px;
+    }
+}
+[class*="slide"] {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.slick-prev {
+    left: -10px;
+}
+.slick-next {
+    right: 0px;
+}
+.slick-prev:before, .slick-next:before  {
+    color: rgb(133, 133, 133);
+    font-size: 30px;
+    display: none;
+}
+.slick-dots {
+    width: 94%;
+}
+.slick-dots li button:before {
+    color: rgb(133, 133, 133);
+}
+.slick-dotted.slick-slider {
+    margin-bottom: 80px;
+}
+.content7 {
+    @include fonts(21px, rgb(133, 133, 133));
+    min-height: 500px;
+    display: grid;
+    grid-template-areas:
+    "a a a"
+    "b c d";
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    gap: 50px 0px;
+}
+.content7-item1 {
+    text-align: center;
+    grid-area: a;
+}
+.content7-item2 {
+    grid-area: b;
+    justify-self: end;
+}
+.content7-item3 {
+    grid-area: c;
+}
+.content7-item4 {
+    grid-area: d;
+    justify-self: start;
+}
+
 
 
 /* Tablet - sm */
@@ -196,8 +277,9 @@ body {
     }
     .slide1 {
         .content1 {
+            font-size: 48px;
             .text-header {
-                font-size: 65px;
+                font-size: 82px;
                 padding-bottom: 15px;
             }
         }
@@ -290,10 +372,32 @@ body {
             text-shadow: rgb(0, 0, 0) 0 0 6px;
         }
     }
+    .slide5 {
+        min-height: 800px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    .content5 {
+        min-height: 800px;
+        @include fonts(50px, white);
+    }
     [class*="slide4-item"]:hover {
-        transform: scale(1.3);
+        transform: scale(1.3) !important;
         text-shadow: rgb(0, 0, 0) 0 0 0px;
-        transition: all ease-in-out 0.5s;
+        transition: all ease-in-out 1s;
+    }
+    .slider {
+        @include fonts(32px, rgb(133, 133, 133));
+        .content-center {
+            @include fonts(40px, rgb(133, 133, 133));
+        }
+    }
+    .slick-prev:before, .slick-next:before  {
+        display: block;
+    }
+    .content7 {
+        @include fonts(32px, rgb(133, 133, 133));
     }
 }
 
@@ -304,9 +408,13 @@ body {
     }
     .menu-content {
         li {
+            transition: all ease-in-out 0.5s;
             &:hover {
                 transform: scale(1.2);
                 transition: all ease-in-out 0.5s;
+            }
+            >a{
+                transition: all ease-in-out 0.5s; 
             }
             &:hover a {
                 border: 1px solid rgb(161, 161, 161);
@@ -351,11 +459,14 @@ body {
     }
     .content3 {
         min-height: 800px;
-        @include fonts(58px, white);
+        @include fonts(46px, white);
     }
     .slide4 {
         min-height: 800px;
         gap: 55px;
+    }
+    .content5 {
+        @include fonts(46px, white);
     }
 }
 
@@ -363,7 +474,7 @@ body {
     .slide1 {
         .content1 {
             left: -220px;
-            top: 530px;
+            top: 496px;
         }
     }
 }
