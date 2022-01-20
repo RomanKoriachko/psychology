@@ -13,23 +13,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Spline+Sans:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <script src="jquery.min.js"></script>
-    <script type="text/javascript">
-        $(function () {
-            $(window).scroll(function () {
-                if ($(this).scrollTop() != 0) {
-                    $('#toTop').fadeIn();
-                } else {
-                    $('#toTop').fadeOut();
-                }
-            });
-            $('#toTop').click(function () {
-                $('body,html').animate({
-                    scrollTop: 0
-                }, 800);
-            });
-        });
-    </script>
 </head>
 <body>
     <header class="header">
@@ -159,6 +142,23 @@
         </div>
         <div id="toTop"></div>
     </main>
+    <script src="jquery.min.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $(window).scroll(function () {
+                if ($(this).scrollTop() != 0) {
+                    $('#toTop').fadeIn();
+                } else {
+                    $('#toTop').fadeOut();
+                }
+            });
+            $('#toTop').click(function () {
+                $('body,html').animate({
+                    scrollTop: 0
+                }, 800);
+            });
+        });
+    </script>
     <script src="jquery-3.6.0.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
