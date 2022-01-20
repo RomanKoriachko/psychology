@@ -40,7 +40,8 @@ body {
 .menu-content {
     display: grid;
     text-align: center;
-    grid-template-columns: 130px 190px 100px 190px;
+    grid-template-columns: 150px 190px 250px 190px;
+    
     grid-template-rows: 80px;
     line-height: 80px;
     overflow-y: hidden;

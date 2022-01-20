@@ -92,8 +92,8 @@ body {
   display: -ms-grid;
   display: grid;
   text-align: center;
-  -ms-grid-columns: 130px 190px 100px 190px;
-      grid-template-columns: 130px 190px 100px 190px;
+  -ms-grid-columns: 150px 190px 250px 190px;
+      grid-template-columns: 150px 190px 250px 190px;
   -ms-grid-rows: 80px;
       grid-template-rows: 80px;
   line-height: 80px;
