@@ -1,17 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>psychology</title>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
-    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+    <link rel="stylesheet" type="text/css" href="slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Spline+Sans:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $(window).scroll(function () {
+                if ($(this).scrollTop() != 0) {
+                    $('#toTop').fadeIn();
+                } else {
+                    $('#toTop').fadeOut();
+                }
+            });
+            $('#toTop').click(function () {
+                $('body,html').animate({
+                    scrollTop: 0
+                }, 800);
+            });
+        });
+    </script>
 </head>
 <body>
     <header class="header">
@@ -21,15 +39,15 @@
                     <ul class="menu-content">
                         <li><a href="#meet">Знакомство</a></li>
                         <li><a href="#problems">С чем я работаю</a></li>
-                        <li><a href="">Пункт 3</a></li>
-                        <li><a href="">Пункт 4</a></li>
-                        <li><a href="">Запись на прием</a></li>
+                        <li><a href="#stage">Этапы психотерапии</a></li>
+                        <li><a href="#contacts">Запись на прием</a></li>
                     </ul>
                 </nav>
             </div>
         </div>
     </header>
     <main class="main">
+        
         <div class="slide1">
             <div class="container">
                 <div class="content1" data-aos="fade-left" data-aos-duration="2500">
@@ -38,72 +56,109 @@
                 </div>
             </div>
         </div>
-            <div><a href="" id="meet"></a></div>
-            <div class="container">
-                <div class="slide2">
-                    <div class="content2" data-aos="fade-up" data-aos-duration="2000">
-                        <p>Здравствуй. Давай познакомимся. Меня зовут Юлия, я дипломированный психолог, член Украинской Ассоциации Психотерапевтов в направлении системного подхода.</p>
-                        <p>Но кроме того, я – просто человек. Со своим опытом личной терапии, со своим большим путем развития. Я понимаю, с чем приходится сталкиваться тебе. Я слышу твои проблемы. И не говорю, что я и только я знаю из них выход. Наоборот, выход знаешь только ты. </p>
-                        <p>Но я буду рядом с тобой в процессе поиска и вместе мы справимся.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="slide3">
-                <div class="container">
-                    <div class="content3" data-aos="zoom-in" data-aos-duration="1500">
-                        <p>МЕНЯЕШЬСЯ ТЫ - МЕНЯЕТСЯ ТВОЯ РЕАЛЬНОСТЬ</p>
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div><a href="" id="problems"></a></div>
-                <div class="slide4">
-                        <div class="slide4-item1" data-aos="fade-down-right" data-aos-duration="1500">Неуверенность</div>
-                        <div class="slide4-item2" data-aos="fade-down" data-aos-duration="1500">Депрессивное состояние</div>
-                        <div class="slide4-item3" data-aos="fade-down-left" data-aos-duration="1500">Конфликты в семье</div>
-                        <div class="item-center" data-aos="zoom-in" data-aos-duration="1500">Я помогу тебе с подобными проблемами</div>
-                        <div class="slide4-item5" data-aos="fade-right" data-aos-duration="1500">Низкая самооценка</div>
-                        <div class="slide4-item6" data-aos="fade-left" data-aos-duration="1500">Проблемы в браке</div>
-                        <div class="slide4-item7" data-aos="fade-up-right" data-aos-duration="1500">Психосоматика</div>
-                        <div class="slide4-item8" data-aos="fade-up" data-aos-duration="1500">Потерянность в жизни</div>
-                        <div class="slide4-item9" data-aos="fade-up-left" data-aos-duration="1500">Трудности с детьми</div>
-                </div>
-            </div>
-            <div class="slide5">
-                <div class="container">
-                    <div class="content5" data-aos="zoom-in" data-aos-duration="1500">
-                        <p>КАК ПРОХОДИТ ПСИХОТЕРАПИЯ?</p>
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="slider">
-                    <div>
-                        <p class="content-center">1</p>
-                        Еще до первой встречи (не важно, онлайн она будет или офлайн) мы с тобой созвонимся, когда тебе будет удобно на 10 минут. Мы познакомимся, ты сможешь рассказать кратко, какой у тебя запрос. А я в свою очередь объясню, по каким принципам я работаю, чего стоит, а чего не стоит ожидать от наших встреч, чтобы у тебя не возникло обманутых ожиданий.
-                    </div>
-                    <div><p class="content-center">2</p>Первая встреча: мы познакомимся ближе, уточним твой запрос, установим цель терапии, обсудим технические моменты наших встреч. От первой встречи не стоит ждать немедленного исцеления, но у тебя появится более широкий взгляд на ситуацию. Ты также сможешь понять, подхожу ли я тебе в качестве психолога, комфортно ли тебе со мной, появилось ли доверие, готов ли ты исследовать себя рядом со мной. И если нет – никаких проблем, я порекомендую тебе коллег, возможно они подойдут для тебя лучше.</div>
-                    <div><p class="content-center">3</p>Основной этап терапии. Ты научишься лучше понимать проблему, а также что ее сохраняет, расширишь свое представление о том, для чего эта проблема вообще появилась в твоей жизни. И, разумеется, поймешь, как действовать, чтобы проблема ушла. <p>Научишься принимать свои переживания, проживать, а не блокировать эмоции. Сможешь заменить автоматические реакции на новые, осознанные действия, лучше научишься себя понимать. Рядом со мной ты найдешь опору в себе, ресурс, который позволит самостоятельно справляться  с проблемами.</p> </div>
-                    <div><p class="content-center">4</p>Завершающий этап. Тут ты почувствуешь, что получил то, зачем пришел. И что дальше ничего важного происходить на терапии не будет. Значит, пришло время подытожить нашу работу и попрощаться. Ты почувствуешь, в чем именно произошли внутри тебя изменения, и поймешь как интегрировать этот опыт в будущее. С большей уверенностью станешь в это будущее смотреть. И это прекрасно!</div>
-                </div>
-            </div>
-            <hr>
-            <div class="container">
-                <div class="slide7">
-                    <div class="content7">
-                        <div class="content7-item1">Если у тебя остались вопросы, или если ты хочешь записаться на первую консультацию, ты можешь связаться со мной:</div>
-                        <div class="content7-item2"><a href="https://www.instagram.com/psiholog_juliia_koriachko/"><img src="images/instagram.png" alt=""></a></div>
-                        <div class="content7-item3"><a href=""><img src="images/telegrdm.png" alt=""></a></div>
-                        <div class="content7-item4"><a href=""><img src="images/viber2.png" alt=""></a></div>
-                    </div>
-                </div>
-            </div>
-    </main>
-    <footer class="footer">
+        <div><a href="" id="meet"></a></div>
         <div class="container">
-
+            <div class="slide2">
+                <div class="content2" data-aos="fade-up" data-aos-duration="2000">
+                    <p>Здравствуй. Давай познакомимся. Меня зовут Юлия, я дипломированный психолог, член Украинской
+                        Ассоциации Психотерапевтов в направлении системного подхода.</p>
+                    <p>Но кроме того, я – просто человек. Со своим опытом личной терапии, со своим большим путем
+                        развития. Я понимаю, с чем приходится сталкиваться тебе. Я слышу твои проблемы. И не говорю, что
+                        я и только я знаю из них выход. Наоборот, выход знаешь только ты. </p>
+                    <p>Но я буду рядом с тобой в процессе поиска и вместе мы справимся.</p>
+                </div>
+            </div>
         </div>
-    </footer>
+        <div class="slide3">
+            <div class="container">
+                <div class="content3" data-aos="zoom-in" data-aos-duration="1500">
+                    <p>МЕНЯЕШЬСЯ ТЫ - МЕНЯЕТСЯ ТВОЯ РЕАЛЬНОСТЬ</p>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div><a href="" id="problems"></a></div>
+            <div class="slide4">
+                <div class="slide4-item1" data-aos="fade-down" data-aos-duration="1500">Неуверенность</div>
+                <div class="slide4-item2" data-aos="fade-down" data-aos-duration="1500">Депрессивное состояние</div>
+                <div class="slide4-item3" data-aos="fade-down" data-aos-duration="1500">Конфликты в семье</div>
+                <div class="item-center" data-aos="zoom-in" data-aos-duration="1500">Я помогу тебе с подобными
+                    проблемами</div>
+                <div class="slide4-item5" data-aos="fade-up" data-aos-duration="1500">Низкая самооценка</div>
+                <div class="slide4-item6" data-aos="fade-down" data-aos-duration="1500">Проблемы в браке</div>
+                <div class="slide4-item7" data-aos="fade-up" data-aos-duration="1500">Психосоматика</div>
+                <div class="slide4-item8" data-aos="fade-up" data-aos-duration="1500">Потерянность в жизни</div>
+                <div class="slide4-item9" data-aos="fade-up" data-aos-duration="1500">Трудности с детьми</div>
+            </div>
+        </div>
+        <div class="slide5">
+            <div class="container">
+                <div><a href="" id="stage"></a></div>
+                <div class="content5" data-aos="zoom-in" data-aos-duration="1500">
+                    <p>КАК ПРОХОДИТ ПСИХОТЕРАПИЯ?</p>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="slider">
+                <div>
+                    <p class="content-center">1</p>
+                    Еще до первой встречи (не важно, онлайн она будет или офлайн) мы с тобой созвонимся, когда тебе
+                    будет удобно на 10 минут. Мы познакомимся, ты сможешь рассказать кратко, какой у тебя запрос. А я в
+                    свою очередь объясню, по каким принципам я работаю, чего стоит, а чего не стоит ожидать от наших
+                    встреч, чтобы у тебя не возникло обманутых ожиданий.
+                </div>
+                <div>
+                    <p class="content-center">2</p>Первая встреча: мы познакомимся ближе, уточним твой запрос, установим
+                    цель терапии, обсудим технические моменты наших встреч. От первой встречи не стоит ждать
+                    немедленного исцеления, но у тебя появится более широкий взгляд на ситуацию. Ты также сможешь
+                    понять, подхожу ли я тебе в качестве психолога, комфортно ли тебе со мной, появилось ли доверие,
+                    готов ли ты исследовать себя рядом со мной. И если нет – никаких проблем, я порекомендую тебе
+                    коллег, возможно они подойдут для тебя лучше.
+                </div>
+                <div>
+                    <p class="content-center">3</p>Основной этап терапии. Ты научишься лучше понимать проблему, а также
+                    что ее сохраняет, расширишь свое представление о том, для чего эта проблема вообще появилась в твоей
+                    жизни. И, разумеется, поймешь, как действовать, чтобы проблема ушла. <p>Научишься принимать свои
+                        переживания, проживать, а не блокировать эмоции. Сможешь заменить автоматические реакции на
+                        новые, осознанные действия, лучше научишься себя понимать. Рядом со мной ты найдешь опору в
+                        себе, ресурс, который позволит самостоятельно справляться с проблемами.</p>
+                </div>
+                <div>
+                    <p class="content-center">4</p>Завершающий этап. Тут ты почувствуешь, что получил то, зачем пришел.
+                    И что дальше ничего важного происходить на терапии не будет. Значит, пришло время подытожить нашу
+                    работу и попрощаться. Ты почувствуешь, в чем именно произошли внутри тебя изменения, и поймешь как
+                    интегрировать этот опыт в будущее. С большей уверенностью станешь в это будущее смотреть. И это
+                    прекрасно!
+                </div>
+            </div>
+        </div>
+        <div class="slide7">
+            <div class="container">
+                <div class="content7">
+                    <p>"Посидеть рядом с тобой и твоей болью" - один из тех редких видов жизненного опыта, который люди
+                        получают в защищенном пространстве кабинета психотерапевта, но его очень сложно воссоздать за
+                        пределами этой комнаты</p>
+                    <p>Лори Готтлиб</p>
+                    <p> "Вы хотите поговорить об этом?"</p>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="slide8">
+                <div class="content8">
+                    <div><a href="" id="contacts"></a></div>
+                    <div class="content8-item1">Если у тебя остались вопросы, или если ты хочешь записаться на первую
+                        консультацию, ты можешь связаться со мной:</div>
+                    <div class="content8-item2"><a href="https://www.instagram.com/psiholog_juliia_koriachko/"><img
+                                src="images/instagram.png" alt=""></a></div>
+                    <div class="content8-item3"><a href=""><img src="images/telegrdm.png" alt=""></a></div>
+                    <div class="content8-item4"><a href=""><img src="images/viber2.png" alt=""></a></div>
+                </div>
+            </div>
+        </div>
+        <div id="toTop"></div>
+    </main>
     <script src="jquery-3.6.0.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
@@ -114,4 +169,5 @@
     <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script type="text/javascript" src="slick/slick.min.js"></script>
 </body>
+
 </html>

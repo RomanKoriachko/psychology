@@ -14,7 +14,7 @@ $('.scrollto a').on('click', function() {
 
 $(document).ready(function(){
     $('.slider').slick({
-        autoplay: true,
+        // autoplay: true,
         dots: true,
         autoplaySpeed: 5000,
         adaptiveHeight: true,

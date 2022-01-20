@@ -15,7 +15,6 @@
 %fonts-bold-stroke {
     font-weight: 700;
     font-size: 32px;
-    -webkit-text-stroke: 0.8px rgb(0, 0, 0);
 }
 body {
     font-family: 'Spline Sans', sans-serif;
@@ -41,9 +40,10 @@ body {
 .menu-content {
     display: grid;
     text-align: center;
-    grid-template-columns: 130px 190px 100px 100px 190px;
+    grid-template-columns: 130px 190px 100px 190px;
     grid-template-rows: 80px;
     line-height: 80px;
+    overflow-y: hidden;
     li {
         a {
             text-decoration: none;
@@ -63,6 +63,8 @@ body {
     background-repeat: no-repeat;
     background-position: top;
     .content1 {
+        background-color: rgba($color: #000000, $alpha: 0.5);
+        padding: 5px 0px;
         @extend %fonts-bold-stroke;
         text-align: center;
         position: relative;
@@ -90,12 +92,13 @@ body {
     background-position: top;
 }
 .content3 {
-    @include fonts(32px, white);
+    @include fonts(25px, white);
     -webkit-text-stroke: 1px rgb(0, 0, 0);
     display: grid;
     text-align: center;
-    height: 500px;
     >p {
+        background-color: rgba($color: #000000, $alpha: 0.5);
+        padding: 10px;
         align-self: flex-start;
         justify-self: center;
         margin-top: 80px;
@@ -194,12 +197,18 @@ body {
     display: grid;
     text-align: center;
     align-content: center;
+    >p {
+        background-color: rgba($color: #000000, $alpha: 0.5);
+        padding: 5px;
+    }
+    
 }
 
 .slider {
     min-height: 400px;
     max-width: 1170px;
-    @include fonts(21px, rgb(133, 133, 133));
+    @include fonts(18px, rgb(133, 133, 133));
+    line-height: 1.5;
     padding: 100px 0px;
     .content-center {
         @include fonts(32px, rgb(133, 133, 133));
@@ -231,7 +240,26 @@ body {
 .slick-dotted.slick-slider {
     margin-bottom: 80px;
 }
+.slide7 {
+    background-image: url(./images/slide7.jpg);
+    background-size: auto 500px;
+    background-repeat: no-repeat;
+    background-position: top;
+    display: grid;
+    align-content: center
+}
 .content7 {
+    @include fonts(22px, white);
+    background-color: rgba($color: #000000, $alpha: 0.6);
+    padding: 20px;
+    >p{
+        margin-bottom: 15px;
+    }
+    >p:nth-child(2) {
+        margin-top: 70px;
+    }
+}
+.content8 {
     @include fonts(21px, rgb(133, 133, 133));
     min-height: 500px;
     display: grid;
@@ -244,21 +272,58 @@ body {
     justify-items: center;
     gap: 50px 0px;
 }
-.content7-item1 {
+.content8-item1 {
     text-align: center;
     grid-area: a;
 }
-.content7-item2 {
+.content8-item2 {
     grid-area: b;
     justify-self: end;
+    transition: 0.5s;
+    &:hover {
+        transform: translateY(-15%);
+        transition: 0.5s;
+    }
 }
-.content7-item3 {
+.content8-item3 {
     grid-area: c;
+    transition: 0.5s;
+    &:hover {
+        transform: translateY(-15%);
+        transition: 0.5s;
+    }
 }
-.content7-item4 {
+.content8-item4 {
     grid-area: d;
     justify-self: start;
+    transition: 0.5s;
+    &:hover {
+        transform: translateY(-15%);
+        transition: 0.5s;
+    }
 }
+.content-footer {
+    height: 80px;
+    display: grid;
+}
+#toTop {
+    width:60px;
+    height: 60px;
+    border:1px solid rgb(133, 133, 133);
+    border-radius: 50px;
+    background-color: white;
+    background-image: url(images/arrow.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    text-align:center;
+    padding:5px;
+    position:fixed;
+    bottom:20px;
+    right:20px;
+    cursor:pointer;
+    display:none;
+    color:#333;
+    }
 
 
 
@@ -270,8 +335,8 @@ body {
             overflow-x: hidden;
             overflow-y: hidden;
             .menu-content {
-                grid-template-columns: 125px 185px 95px 95px 190px;
-                justify-content: space-around;
+                grid-template-columns: 125px 185px 230px 190px;
+                justify-content: space-evenly;
             }
         }
     }
@@ -295,7 +360,8 @@ body {
     .content3 {
         @include fonts(42px, white); 
         >p {
-            margin-top: 140px;
+            background-color: rgba($color: #000000, $alpha: 0.5);
+            padding: 20px 15px;
         }
     }
     .slide3 {
@@ -306,16 +372,12 @@ body {
     }
     .slide4 {
         grid-template-rows: repeat(3, 1fr);
-        grid-template-columns: 30% 40% 30%;
+        grid-template-columns: 30% 35% 30%;
         gap: 15px;
         grid-template-areas: 
         "a b c"
         "d e f"
         "g h i";
-        .content3 {
-            min-height: 800px;
-            @include fonts(50px, white);
-        }
         .slide4-item1 {
             grid-area: a;
             justify-self: center;
@@ -381,6 +443,12 @@ body {
     .content5 {
         min-height: 800px;
         @include fonts(50px, white);
+        justify-content: center;
+        >p {
+            background-color: rgba($color: #000000, $alpha: 0.5);
+            padding: 20px;
+            width: 850px;
+        }
     }
     [class*="slide4-item"]:hover {
         transform: scale(1.3) !important;
@@ -396,7 +464,13 @@ body {
     .slick-prev:before, .slick-next:before  {
         display: block;
     }
-    .content7 {
+    .slide7 {
+        min-height: 800px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    .content8 {
         @include fonts(32px, rgb(133, 133, 133));
     }
 }
@@ -434,6 +508,8 @@ body {
             text-align: left;
             left: -15px;
             top: 530px;
+            width: 800px;
+            padding: 20px;
         }
     }
     .content2 {
@@ -442,6 +518,10 @@ body {
     }
     .slide4 {
         gap: 40px;
+    }
+    .content7 {
+        @include fonts(32px, white);
+        padding: 40px;
     }
 }
 /* Desktop - lg */
@@ -458,14 +538,19 @@ body {
         margin-top: 150px;
     }
     .content3 {
-        min-height: 800px;
-        @include fonts(46px, white);
+        @include fonts(44px, white);
+        >p {
+            padding: 20px;
+        }
     }
     .slide4 {
         min-height: 800px;
         gap: 55px;
     }
     .content5 {
+        @include fonts(46px, white);
+    }
+    .content7 {
         @include fonts(46px, white);
     }
 }

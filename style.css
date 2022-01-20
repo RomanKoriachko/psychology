@@ -61,7 +61,6 @@ table {
 .slide1 .content1, .slide3 {
   font-weight: 700;
   font-size: 32px;
-  -webkit-text-stroke: 0.8px black;
 }
 
 body {
@@ -93,11 +92,12 @@ body {
   display: -ms-grid;
   display: grid;
   text-align: center;
-  -ms-grid-columns: 130px 190px 100px 100px 190px;
-      grid-template-columns: 130px 190px 100px 100px 190px;
+  -ms-grid-columns: 130px 190px 100px 190px;
+      grid-template-columns: 130px 190px 100px 190px;
   -ms-grid-rows: 80px;
       grid-template-rows: 80px;
   line-height: 80px;
+  overflow-y: hidden;
 }
 
 .menu-content li a {
@@ -118,6 +118,8 @@ body {
 }
 
 .slide1 .content1 {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 5px 0px;
   text-align: center;
   position: relative;
   top: 208px;
@@ -149,16 +151,17 @@ body {
 
 .content3 {
   font-weight: 400;
-  font-size: 32px;
+  font-size: 25px;
   color: white;
   -webkit-text-stroke: 1px black;
   display: -ms-grid;
   display: grid;
   text-align: center;
-  height: 500px;
 }
 
 .content3 > p {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px;
   -ms-flex-item-align: start;
       align-self: flex-start;
   -ms-grid-column-align: center;
@@ -319,12 +322,18 @@ body {
       align-content: center;
 }
 
+.content5 > p {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 5px;
+}
+
 .slider {
   min-height: 400px;
   max-width: 1170px;
   font-weight: 400;
-  font-size: 21px;
+  font-size: 18px;
   color: #858585;
+  line-height: 1.5;
   padding: 100px 0px;
 }
 
@@ -367,7 +376,34 @@ body {
   margin-bottom: 80px;
 }
 
+.slide7 {
+  background-image: url(./images/slide7.jpg);
+  background-size: auto 500px;
+  background-repeat: no-repeat;
+  background-position: top;
+  display: -ms-grid;
+  display: grid;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
 .content7 {
+  font-weight: 400;
+  font-size: 22px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 20px;
+}
+
+.content7 > p {
+  margin-bottom: 15px;
+}
+
+.content7 > p:nth-child(2) {
+  margin-top: 70px;
+}
+
+.content8 {
   font-weight: 400;
   font-size: 21px;
   color: #858585;
@@ -387,7 +423,7 @@ body {
   gap: 50px 0px;
 }
 
-.content7-item1 {
+.content8-item1 {
   text-align: center;
   -ms-grid-row: 1;
   -ms-grid-column: 1;
@@ -395,26 +431,78 @@ body {
   grid-area: a;
 }
 
-.content7-item2 {
+.content8-item2 {
   -ms-grid-row: 2;
   -ms-grid-column: 1;
   grid-area: b;
   -ms-grid-column-align: end;
       justify-self: end;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
-.content7-item3 {
+.content8-item2:hover {
+  -webkit-transform: translateY(-15%);
+          transform: translateY(-15%);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.content8-item3 {
   -ms-grid-row: 2;
   -ms-grid-column: 2;
   grid-area: c;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
-.content7-item4 {
+.content8-item3:hover {
+  -webkit-transform: translateY(-15%);
+          transform: translateY(-15%);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.content8-item4 {
   -ms-grid-row: 2;
   -ms-grid-column: 3;
   grid-area: d;
   -ms-grid-column-align: start;
       justify-self: start;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.content8-item4:hover {
+  -webkit-transform: translateY(-15%);
+          transform: translateY(-15%);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.content-footer {
+  height: 80px;
+  display: -ms-grid;
+  display: grid;
+}
+
+#toTop {
+  width: 60px;
+  height: 60px;
+  border: 1px solid #858585;
+  border-radius: 50px;
+  background-color: white;
+  background-image: url(images/arrow.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  text-align: center;
+  padding: 5px;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  cursor: pointer;
+  display: none;
+  color: #333;
 }
 
 /* Tablet - sm */
@@ -427,10 +515,11 @@ body {
     overflow-y: hidden;
   }
   .container .menu .menu-content {
-    -ms-grid-columns: 125px 185px 95px 95px 190px;
-        grid-template-columns: 125px 185px 95px 95px 190px;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
+    -ms-grid-columns: 125px 185px 230px 190px;
+        grid-template-columns: 125px 185px 230px 190px;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
   }
   .slide1 .content1 {
     font-size: 48px;
@@ -455,7 +544,8 @@ body {
     color: white;
   }
   .content3 > p {
-    margin-top: 140px;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px 15px;
   }
   .slide3 {
     min-height: 800px;
@@ -466,16 +556,10 @@ body {
   .slide4 {
     -ms-grid-rows: (1fr)[3];
         grid-template-rows: repeat(3, 1fr);
-    -ms-grid-columns: 30% 40% 30%;
-        grid-template-columns: 30% 40% 30%;
+    -ms-grid-columns: 30% 35% 30%;
+        grid-template-columns: 30% 35% 30%;
     gap: 15px;
         grid-template-areas: "a b c" "d e f" "g h i";
-  }
-  .slide4 .content3 {
-    min-height: 800px;
-    font-weight: 400;
-    font-size: 50px;
-    color: white;
   }
   .slide4 .slide4-item1 {
     -ms-grid-row: 1;
@@ -583,6 +667,14 @@ body {
     font-weight: 400;
     font-size: 50px;
     color: white;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .content5 > p {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    width: 850px;
   }
   [class*="slide4-item"]:hover {
     -webkit-transform: scale(1.3) !important;
@@ -604,7 +696,13 @@ body {
   .slick-prev:before, .slick-next:before {
     display: block;
   }
-  .content7 {
+  .slide7 {
+    min-height: 800px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .content8 {
     font-weight: 400;
     font-size: 32px;
     color: #858585;
@@ -648,6 +746,8 @@ body {
     text-align: left;
     left: -15px;
     top: 530px;
+    width: 800px;
+    padding: 20px;
   }
   .content2 {
     margin-top: 100px;
@@ -655,6 +755,12 @@ body {
   }
   .slide4 {
     gap: 40px;
+  }
+  .content7 {
+    font-weight: 400;
+    font-size: 32px;
+    color: white;
+    padding: 40px;
   }
 }
 
@@ -670,16 +776,23 @@ body {
     margin-top: 150px;
   }
   .content3 {
-    min-height: 800px;
     font-weight: 400;
-    font-size: 46px;
+    font-size: 44px;
     color: white;
+  }
+  .content3 > p {
+    padding: 20px;
   }
   .slide4 {
     min-height: 800px;
     gap: 55px;
   }
   .content5 {
+    font-weight: 400;
+    font-size: 46px;
+    color: white;
+  }
+  .content7 {
     font-weight: 400;
     font-size: 46px;
     color: white;
